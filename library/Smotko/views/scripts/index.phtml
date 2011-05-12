@@ -1,0 +1,33 @@
+<table class="<?php echo $this->tableName; ?>">
+<caption><?php echo $this->tableName?></caption>
+<thead>
+<tr>
+<?php foreach ($this->tableInfo['cols'] as $name=>$value): if(substr($value, 0, 2) == 'id') continue; ?>
+
+<th><?php echo $value ?></th>
+
+<?php endforeach ?>
+</tr>
+</thead>
+
+<tbody>
+   
+
+<?php foreach ($this->tableBody as $item): ?>
+    <tr>
+    <?php foreach ($item as $name=>$ele): if(substr($name, 0, 2) == 'id') continue; ?>
+    <?php if($name != "_useViewStream" && $name != "_useStreamWrapper" && $name != "partialCounter"): ?>
+    <td class="<?php echo $name;?>"><?php echo substr(htmlspecialchars($ele), 0, 100) ?></td>
+    <?php endif ?>
+    <?php endforeach?>
+    <td><a href="<?php echo $this->path . 'edit/id/' .$item['id']?>">UREDI</a></td>
+    <td><a href="<?php echo $this->path . 'delete/id/' .$item['id']?>">ZBRIŠI</a></td>
+    </tr>
+<?php endforeach;?>
+
+</tbody>
+</table>
+<?php echo $this->paginationControl($this->tableBody,
+                                    'Sliding',
+                                    'pagination.phtml'); ?>
+<a href="<?php echo $this->path;?>add/">Dodaj</a>

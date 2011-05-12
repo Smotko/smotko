@@ -1,0 +1,16 @@
+<div class="grid_9 boxshadow">
+    <h1>Debate:</h1>
+    <?php echo $this->partialLoop('comments/comment.phtml', $this->debate); ?>
+    <?php echo $this->paginationControl($this->debate,
+                                    'Sliding',
+                                    'pagination.phtml'); ?>
+</div>
+<div class="grid_3 boxshadow">
+    <h1>Najbolj aktivni:</h1>
+    <ul>
+        <li><a href="/debate/">Vsi</a></li>
+    <?php foreach($this->users as $usr): ?>
+    <li><a href="/debate/user/id/<?php echo $usr['id'];?>" title="Št. prispevkov: <?php echo $usr['debateCount'];?>"><?php echo $usr['user_name'];?></a></li>
+    <?php endforeach; ?>
+    </ul>
+</div>

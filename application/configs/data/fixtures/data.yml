@@ -1,0 +1,20 @@
+Model_User:
+  User_1:
+    password: pw
+    user_name: Smotko
+    user_url: http://smotko.si
+    user_email: smotko@smotko.si
+    role: admin
+
+Model_Settings:
+  Settings_1:
+    name: default
+    active: true
+
+Model_SettingsMeta:
+  SettingsMeta_1:
+    settings_id: 1
+    metaKey: site_title
+    metaValue: smotko
+    
+

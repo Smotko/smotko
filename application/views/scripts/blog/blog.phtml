@@ -1,0 +1,40 @@
+<h2><a href="/blog/<?php echo $this->slug;?>"><?php echo $this->title; ?></a></h2>
+<div class="justify">
+<div class="meta grid_2 omega" style="float:right;"><p>
+<b>Datum:</b> <?php echo $this->dateTimeFormat($this->created_at);?>
+<br />
+<b>Kategorije:</b>
+<?php foreach($this->Categories as $cat):?>
+<a href="/blogs/categories/categorie/<?php echo $cat['slug'];?>"><?php echo $cat['name'];?></a>
+<?php endforeach?>
+<br />
+<b>Napisal/a:</b> <?php echo $this->User['user_name']; ?>
+<br />
+<?php if($this->commentCount == 0): ?>
+<a href="/blog/<?php echo $this->slug;?>#blog-comments">Ni komentarjev</a>
+<?php else:?>
+<a href="/blog/<?php echo $this->slug;?>#blog-comments">Št. komentarjev: <?php echo $this->commentCount;?></a>
+<?php endif ?>
+</p>
+</div>
+<p class="description"><i><?php echo $this->excerpt; ?></i></p>
+<?php  echo $this->content ?>
+
+</div>
+<p class="author"> </p>
+
+<?php if(isset($this->Comments)): ?>
+<?php if(isset($this->style)): ?>
+<style type="text/css">
+    <?php echo $this->style;?>
+</style>
+<?php endif; ?>
+<h1 id="blog-comments">Komentarji:</h1>
+<?php if($this->commentCount > 0): ?>
+<?php echo $this->partialLoop('comments/comment.phtml', $this->Comments); ?>
+<?php else: ?>
+<p>Imaš čast, da prvi komentiraš!</p>
+<?php endif; ?>
+<h2>Dodaj komentar:</h2>
+<?php echo $this->form; ?>
+<?php endif; ?>

@@ -1,0 +1,24 @@
+<div class="grid_9">
+<h1>Site Settings</h1>
+<?php echo $this->form ?>
+</div>
+<div class="grid_3">
+<h1>Saved settings</h1>
+<ul class="list">
+<?php foreach($this->list as $setting): ?>
+    <li>
+        <div style="float:left;"><a href="/admin/settings/index/id/<?php echo $setting['id']; ?>" title="<?php echo $setting['name'];?>"><?php echo $setting['name'];?></a></div>
+        <div style="float:right;">
+        <a class="img" href="/admin/settings/delete/id/<?php echo $setting['id']; ?>">
+            <img src="/images/icons/delete.png" alt="delete" title="Zbriši" />
+        </a>
+        <a class="img" href="/admin/settings/active/id/<?php echo $setting['id']; ?>">
+            <img src="/images/icons/edit.png" alt="active" title="Aktivna" />
+        </a>
+        </div>
+        <div style="clear:both;"></div>
+    </li>
+<?php endforeach?>
+</ul>
+<?php echo $this->formAdd; ?>
+</div>

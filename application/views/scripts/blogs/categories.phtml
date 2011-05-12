@@ -1,0 +1,17 @@
+<div class="grid_9 boxshadow">
+<h1>Blogi s kategorijo <?php echo $this->categorie;?>:</h1>
+<?php echo $this->partialLoop('blog/blog.phtml', $this->blogs); ?>
+    <?php echo $this->form; ?>
+    <?php echo $this->paginationControl($this->blogs,
+                                    'Sliding',
+                                    'pagination.phtml'); ?>
+</div>
+<div class="grid_3 boxshadow">
+    <h1>Kategorije:</h1>
+    <ul>
+    <li><a href="/blogs">Vse</a></li>
+    <?php foreach($this->categories as $cat): ?>
+    <li><a href="/blogs/categories/categorie/<?php echo $cat['slug'];?>"><?php echo $cat['name'];?></a></li>
+    <?php endforeach; ?>
+    </ul>
+</div>

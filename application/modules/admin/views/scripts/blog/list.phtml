@@ -1,0 +1,22 @@
+<div class="grid_8">
+    <h1>Blogi:</h1>
+    <ul class="list">
+        <?php foreach($this->blogs as $blog): ?>
+        <li>
+            <a href="/admin/blog/edit/id/<?php echo $blog['id']?>"><?php echo $blog['title']?></a>
+            <div style="position: absolute; display: inline; right: 10px;">
+                <a class="img" href="/admin/blog/delete/id/<?php echo $blog['id']; ?>">
+            <img src="/images/icons/delete.png" alt="delete" title="Zbriši" />
+                 </a>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<div class="grid_4">
+    <h1>Statistika</h1>
+    <p>Št. vseh: <strong><?php echo count($this->blogs)?></strong></p>
+    <h1>Nov blog</h1>
+    <a href="/admin/blog/">Bodi priden in napiši nov blog!</a>
+
+</div>

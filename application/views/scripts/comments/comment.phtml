@@ -1,0 +1,31 @@
+<?php $this->headScript()->prependFile('/scripts/chat.js', $type = 'text/javascript');?>
+<div class="chat">
+    <div class="grid_2 alpha">
+        <p class="comment_meta">
+    <?php
+    if($this->User['user_url'] != null && $this->User['user_url'] != 'http://')
+        echo '<a href="' . $this->escape($this->User['user_url']) . '" title="'.$this->escape($this->User['user_url']).'">' . $this->escape($this->user_name) . '</a>';
+    else
+        echo '<span class="user" title="Napisano: '. $this->dateTimeFormat($this->created_at) .'">' . $this->escape($this->user_name) . '</span>'; ?>
+            <br /><span class="meta"><?php echo $this->dateTimeFormat($this->created_at);?></span>
+          <?php if($this->userCanEdit($this->user_id)): ?>
+            <br />
+              <a href="/<?php if(isset($this->post_id)) echo 'comments'; else echo 'debate';?>/edit/id/<?php echo $this->id;?>">
+                <img src="/images/icons/edit.png" alt="Uredi" title="Uredi" />
+              </a>
+
+              <a href="/<?php if(isset($this->post_id)) echo 'comments'; else echo 'debate';?>/delete/id/<?php echo $this->id;?>/<?php echo $this->post_id ? 'post_id/' . $this->post_id : '';?>">
+                  <img src="/images/icons/delete.png" alt="Zbriši" title="Zbriši" />
+              </a>
+            <?php endif?>
+        </p>
+
+    </div>
+
+    <div class="grid_<?php if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'index' || Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'api') echo '4'; else if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'blog') echo '10'; else echo '7';?> omega">
+
+    <p class="comment_content"><?php echo $this->prepareContent($this->content); ?></p>
+    <div class="comment_dots">...</div>
+    </div>
+    <div class="clear"></div>
+</div>

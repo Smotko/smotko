@@ -1,0 +1,30 @@
+<div class="grid_9 boxshadow">
+    <h1>PNPji:</h1>
+    <?php $i = 0; $first = true; $last = false; foreach($this->pnp as $pnp):?>
+    <?php if($i % 3 == 0) $first = true; else $first = false;
+           if($i % 3 == 2) $last = true; else $last = false;
+           $i++;
+    ?>
+    <div class="chat grid_3<?php if($first) echo ' alpha'; else if($last) echo ' omega'?>">
+    <p class="meta">
+        <?php echo $this->dateFormat($pnp['date']);?>
+    </p>
+    <p class="pnp_content">
+        <?php echo $pnp['content'];?>
+    </p>
+    <p class="author">
+       Napisal/a: <?php echo $pnp['User']['user_name']; ?>
+    </p>
+    </div>
+    <?php if($last):?>
+    <div class="clear"></div>
+    <?php endif; ?>
+    <?php endforeach; ?>
+    <?php echo $this->paginationControl($this->pnp,
+                                    'Sliding',
+                                    'pagination.phtml'); ?>
+</div>
+<div class="grid_3 boxshadow">
+    <h1>Dodaj svoj PNP:</h1>
+    <?php echo $this->form;?>
+</div>

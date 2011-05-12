@@ -1,0 +1,38 @@
+<div class="grid_9">
+    <h1>Blog</h1>
+    <?php echo $this->form ?>
+</div>
+<div class="grid_3">
+    <h1>Zadnji napisani blogi:</h1>
+    <ul class="list">
+        <?php foreach($this->blogs as $blog): ?>
+        <li>
+            <a href="/admin/blog/edit/id/<?php echo $blog['id']?>"><?php echo $blog['title']?></a>
+            <div style="position: absolute; display: inline; right: 10px;">
+                <a class="img" href="/admin/blog/delete/id/<?php echo $blog['id']; ?>">
+            <img src="/images/icons/delete.png" alt="delete" title="Zbriši" />
+                 </a>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <a href="/admin/blog/list">Pokaži vse</a>
+    <h1>
+        Dodaj kategorijo:
+    </h1>
+    <ul class="list">
+        <?php foreach($this->categories as $cat): ?>
+        <li>
+            <?php echo $cat['name']?>
+            <div style="position: absolute; display: inline; right: 10px;">
+                <a class="img" href="/admin/blog/deletecategorie/id/<?php echo $cat['id']; ?>">
+            <img src="/images/icons/delete.png" alt="delete" title="Zbriši" />
+                 </a>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <form action="/admin/blog/addcategorie/" method="post">
+        <fieldset><input type="text" name="name" /><input type="submit" name="category" value="Dodaj" /></fieldset>
+    </form>
+</div>

@@ -1,0 +1,103 @@
+<div class="grid_12">
+  <div class="grid_3 alpha">
+    <div class="boxshadow">
+  <h1>Današnji PNP:</h1>
+    <?php if($this->isAdmin() && $this->unconfirmedPnps > 0): ?>
+    <p class="notice">Št. nepotrjenih <a href="/admin/pnp">PNP</a>jev je <?php echo $this->unconfirmedPnps;?>!</p>
+    <?php endif ?>
+    <?php if($this->pnp):?>
+    <div class="chat">
+    <p class="meta">
+        <?php echo $this->dateFormat($this->pnp['date']);?>
+    </p>
+    <p class="pnp_content">
+        <?php echo $this->pnp['content']; ?>
+    </p>
+    <p class="author">
+        Napisal/a: <?php echo $this->pnp['User']['user_name'];?>
+    </p>
+
+    </div>
+    <?php endif; ?>
+    <p><a href="/pnp">Dodaj svoj PNP</a></p>
+    </div>
+    <div class="boxshadow">
+    <h1>Zadnji komentarji</h1>
+    <?php echo $this->partialLoop('comments/commentLink.phtml', $this->comments); ?>
+    </div>
+
+    <?php if($this->userId()): ;?>
+    <div class="boxshadow">
+    <h1>Zadnji blogi:</h1>
+    <?php echo $this->partialLoop('blog/blog-title.phtml', $this->blogs); ?>
+</div>
+
+    <div class="boxshadow">
+    <h1>Odjava</h1>
+    <p><a href="/index/logout/" title="Uporabno, če stran uporabljate na javnem računalniku.">Odjavi se</a></p>
+    </div>
+    <?php endif; ?>
+  </div>
+  <div class="grid_6 boxshadow">
+      <h1>Debate:</h1>
+      <div id = "new_debate">Nova sporočila!</div>
+      <div class="debate_content">
+    <?php $this->debate->index = true; echo $this->partialLoop('comments/comment.phtml', $this->debate); ?>
+
+    <?php echo $this->paginationControl($this->debate,
+                                    'Sliding',
+                                    'pagination.phtml'); ?>
+      </div>
+    <h2>Prispevaj:</h2>
+    <?php echo $this->debateForm; ?>
+
+    </div>
+
+
+    
+    <div class="grid_3 omega boxshadow">
+<script src="http://www.reddit.com/user/Smotko/liked.embed?limit=5&sort=hot&style=off" type="text/javascript"></script>
+
+<p><a href="http://www.reddit.com/user/Smotko/liked/">Starejši</a></p>
+</div>
+<div class="grid_3 omega">
+    <div class="boxshadow">
+
+    <h1>Zadnji tweeti</h1>
+        <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 4,
+          interval: 6000,
+          width: 'auto',
+          height: 320,
+          theme: {
+            shell: {
+              background: '#ffffff',
+              color: '#000000'
+            },
+            tweets: {
+              background: '#ffffff',
+              color: '#000000',
+              links: '#FB9924',
+              text: 'left'
+            }
+          },
+          features: {
+            scrollbar: true,
+            loop: false,
+            live: true,
+            hashtags: true,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+          }
+        }).render().setUser('smotko').start();
+        </script>
+        </div>
+    
+    </div>
+</div>
+

@@ -1,0 +1,31 @@
+* { font-family: sans-serif; }
+
+div#header { border-bottom: 1px dotted cornflowerblue; overflow: hidden; }
+
+div #title { height: 100px; line-height: 100px; color: cornflowerblue;; font-size: 30px; font-weight: bold;  }
+
+div#content { overflow: hidden; padding: 10px 0px; }
+
+ul { border: 1px solid red; }
+
+div #menu {  }
+
+div#menu ul { border-right:1px dotted cornflowerblue; }
+
+div#menu ul li a { color:cornflowerblue; padding: 2px 4px 2px 4px; margin-bottom: 4px; display: block; font-size: large; text-decoration: none; }
+
+div#menu ul li a:hover { color:white; background-color: cornflowerblue; }
+
+form dl dd { width:460px; display:inline; float:left; margin-left:10px; margin-right:0px; position:relative; }
+
+form dl dt { width:220px; display:inline; float:left; margin-left:0px; margin-right:10px; position:relative; text-align: right; }
+
+form.smotko_form { overflow: hidden; }
+
+form.smotko_form fieldset {color: cornflowerblue;  }
+
+form.smotko_form input,textarea    { border: none; border-bottom: 2px solid cornflowerblue; padding:4px 0px; background-color: aliceblue; }
+
+form.smotko_form label { text-align: right; }
+
+div#footer { border-top: 1px dotted cornflowerblue; padding: 10px 0px; overflow: hidden; }

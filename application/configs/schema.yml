@@ -1,0 +1,167 @@
+User:
+  actAs:
+    Versionable:
+      versionColumn: version
+      className: %CLASS%Version
+      auditLog: true
+  columns:
+    password: string(255)
+    user_name: string(255)
+    user_url: string(500)
+    user_email: string(500)
+    user_ip: string(255)
+    user_agent: string(255)
+    role: string(255)
+    debateCount:
+      type: integer
+      default: 0
+    commentCount:
+      type: integer
+      default: 0
+    #last_login: timestamp
+  relations:
+    Posts:
+      type: many
+      class: Post
+      local: id
+      foreign: user_id
+
+Settings:
+  columns:
+    name: string(255)
+    active: boolean
+  relations:
+    # ...
+    SettingsMeta:
+      type: many
+      local: id
+      foreign: settings_id
+      cascade: [delete]
+
+SettingsMeta:
+  columns:
+    settings_id: integer
+    metaKey: string(255)
+    metaValue: string(1000)
+  relations:
+    Settings:
+      local: settings_id
+      foreign: id
+
+Post:
+  actAs:
+    Versionable:
+      versionColumn: version
+      className: %CLASS%Version
+      auditLog: true
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [title]
+      canUpdate: true
+  columns:
+    user_id: integer
+    title: string(255)
+    excerpt: string(1000)
+    content: string(10000)
+    style: string(1000)
+    status: string(25)
+    type: string(25)
+    commentCount:
+      type: integer
+      default: 0
+  relations:
+    Categories:
+      class: categories
+      local: post_id
+      foreign: categorie_id
+      refClass: PostCategories
+    User:
+      local: user_id
+      foreign: id
+    Comments:
+      local: id
+      foreign: post_id
+      type: many
+
+      
+
+Categories:
+  actAs:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+  columns:
+    name: string(25)
+  relations:
+    Post:
+      class: Post
+      local: categorie_id
+      foreign: post_id
+      refClass: PostCategories
+
+
+PostCategories:
+  columns:
+    post_id:
+      type: integer
+      primary: true
+    categorie_id:
+      type: integer
+      primary: true
+
+Comments:
+  actAs:
+    Versionable:
+      versionColumn: version
+      className: %CLASS%Version
+      auditLog: true
+    Timestampable: 
+  columns:
+    post_id: integer
+    user_id: integer
+    user_name: string(100)
+    user_email: string(200)
+    user_url: string(200)
+    content: string(1000)
+  relations:
+    User:
+      local: user_id
+      foreign: id
+
+Debate:
+  actAs:
+    Versionable:
+      versionColumn: version
+      className: %CLASS%Version
+      auditLog: true
+    Timestampable:
+  columns:
+    user_id: integer
+    user_name: string(100)
+    user_email: string(200)
+    user_url: string(200)
+    content: string(1000)
+  relations:
+    User:
+      local: user_id
+      foreign: id
+
+Pnp:
+  columns:
+    user_id: integer
+    content: string(255)
+    date: date
+  relations:
+    User:
+      local: user_id
+      foreign: id
+
+
+    
+
+    
+
+
+

@@ -1,0 +1,28 @@
+<div class="grid_7">
+<h1>Dodaj</h1>
+
+<?php echo $this->form; ?>
+<br />
+<h2>Nepotrjeni:</h2>
+<ul>
+<?php foreach($this->unconfirmed as $pnp):?>
+    <li><a href="/admin/pnp/index/id/<?php echo $pnp['id'];?>"><?php echo $pnp['content'];?></a> Napisal/a: <?php echo $pnp['User']['user_name'];?></li>
+<?php endforeach; ?>
+</ul>
+</div>
+<div class="grid_5">
+<h1>PNPji</h1>
+<ul class="list">
+<?php foreach($this->dates as $date): ?>    
+    <li
+        style="float:left;"
+        class="<?php if($date['current'] == 1) echo "current" ?>">
+
+        <a href="/admin/pnp/index/date/<?php echo $date['date']; ?>"
+           class="<?php if($date['added'] == 0) echo "red"; else echo "green"; ?>">
+               <?php echo $date['date']; ?>
+        </a>
+    </li>
+<?php endforeach; ?>
+</ul>
+</div>

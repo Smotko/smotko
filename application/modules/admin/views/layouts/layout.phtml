@@ -1,0 +1,54 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php echo $this->headMeta()."\n"; ?>
+<?php echo $this->headTitle()."\n"; ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl().'/css/reset.css')
+                            //->appendStylesheet($this->baseUrl().'/css/text.css')
+                            ->appendStylesheet($this->baseUrl().'/css/960.css')
+                            ->appendStylesheet($this->baseUrl().'/css/site.css');
+      echo $this->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', $type = 'text/javascript')
+                              ->appendFile('/scripts/ckeditor/ckeditor.js', $type = 'text/javascript')
+                              ->appendFile('/scripts/ckeditor/adapters/jquery.js', $type = 'text/javascript')
+                                ;?>
+</head>
+<body>
+<div class="header_bg">
+<div class="container_12" id="header">
+    <div class="grid_7">
+        <h1 class="site_title"><a href="/">Admin</a></h1>
+        <p class="site_description"></p>
+    </div>
+    <div class="grid_5" id="menu">
+        <span id="login-info" class="textshadow">
+
+        </span>
+
+          <?php echo $this->partial('menu.phtml'); ?>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container_12" id="content">
+<?php echo $this->statusMessage(); ?>
+<?php echo $this->layout()->content; ?>
+</div>
+<div class="container_12" id="footer">
+
+
+
+</div>
+
+
+<script type="text/javascript">
+	$( 'textarea.editor' ).ckeditor();
+</script>
+
+</body>
+</html>
