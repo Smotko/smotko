@@ -8,7 +8,7 @@ class ApiController extends Zend_Controller_Action
         /* COPY PASTED CODE FROM INDEX CONTROLLER! IF YOU ARE READING THIS YOU SHOULD REFACTOR IT! :p */
         $paginator = Zend_Paginator::factory(Model_Debate::getDebate());
         $paginator->setCurrentPageNumber($this->_getParam('stran'));
-        $paginator->setItemCountPerPage(5);
+        $paginator->setItemCountPerPage(10);
         $this->view->debate = $paginator;
         $this->_helper->layout->disableLayout();        
     }
