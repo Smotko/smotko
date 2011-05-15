@@ -15,7 +15,7 @@ class IndexController extends Zend_Controller_Action
 
         $paginator = Zend_Paginator::factory(Model_Debate::getDebate());
         $paginator->setCurrentPageNumber($this->_getParam('stran'));
-        $paginator->setItemCountPerPage(10);
+        $paginator->setItemCountPerPage(8);
 
         $this->view->debate = $paginator;
 
