@@ -38,7 +38,7 @@
     </div>
     <?php endif; ?>
   </div>
-  <div class="grid_6 boxshadow">
+  <div class="grid_9 boxshadow">
       <h1>Debate:</h1>
       <div id = "new_debate">Nova sporočila!</div>
       <div class="debate_content">
@@ -51,53 +51,6 @@
     <h2>Prispevaj:</h2>
     <?php echo $this->debateForm; ?>
 
-    </div>
-
-
-    
-    <div class="grid_3 omega boxshadow">
-<script src="http://www.reddit.com/user/Smotko/liked.embed?limit=5&sort=hot&style=off" type="text/javascript"></script>
-
-<p><a href="http://www.reddit.com/user/Smotko/liked/">Starejši</a></p>
-</div>
-<div class="grid_3 omega">
-    <div class="boxshadow">
-
-    <h1>Zadnji tweeti</h1>
-        <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
-        <script type="text/javascript">
-        new TWTR.Widget({
-          version: 2,
-          type: 'profile',
-          rpp: 4,
-          interval: 6000,
-          width: 'auto',
-          height: 320,
-          theme: {
-            shell: {
-              background: '#ffffff',
-              color: '#000000'
-            },
-            tweets: {
-              background: '#ffffff',
-              color: '#000000',
-              links: '#FB9924',
-              text: 'left'
-            }
-          },
-          features: {
-            scrollbar: true,
-            loop: false,
-            live: true,
-            hashtags: true,
-            timestamp: true,
-            avatars: false,
-            behavior: 'all'
-          }
-        }).render().setUser('smotko').start();
-        </script>
-        </div>
-    
     </div>
 </div>
 
