@@ -22,7 +22,7 @@
 
     </div>
 
-    <div class="grid_<?php if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'index' || Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'api') echo '4'; else if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'blog') echo '10'; else echo '7';?> omega">
+    <div class="grid_<?php if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'index' || Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'api') echo '7'; else if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'blog') echo '10'; else echo '7';?> omega">
 
     <p class="comment_content"><?php echo $this->prepareContent($this->content); ?></p>
     <div class="comment_dots">...</div>
