@@ -56,7 +56,7 @@ class DebateController extends Zend_Controller_Action
                 $this->_redirect('/');
             }
             else{
-                //$debate->populate($this->getRequest()->getParams());
+                $debate->populate($this->getRequest()->getParams());
                 $this->view->form = $debate;
                 
             }

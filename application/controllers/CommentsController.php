@@ -44,6 +44,7 @@ class CommentsController extends Zend_Controller_Action
             }
             else{
                 $form->setAction('/comments/add');
+                $form->populate($this->getRequest()->getParams());
                 $this->view->form = $form;
 
             }
