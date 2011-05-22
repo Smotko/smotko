@@ -25,14 +25,19 @@
     <h1>Zadnji komentarji</h1>
     <?php echo $this->partialLoop('comments/commentLink.phtml', $this->comments); ?>
     </div>
+    
+    <div class="boxshadow">
+    <h1>Login n' stuff</h1>
+    <?php echo $this->user; ?>
+    </div>
 
-    <?php if($this->userId()): ;?>
     <div class="boxshadow">
     <h1>Zadnji blogi:</h1>
     <?php echo $this->partialLoop('blog/blog-title.phtml', $this->blogs); ?>
 </div>
 
     <div class="boxshadow">
+    <?php if($this->userId()): ;?>
     <h1>Odjava</h1>
     <p><a href="/index/logout/" title="Uporabno, če stran uporabljate na javnem računalniku.">Odjavi se</a></p>
     </div>

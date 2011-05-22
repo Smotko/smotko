@@ -1,6 +1,6 @@
 <?php
 
-class Admin_UserController extends Zend_Controller_Action
+class UserController extends Zend_Controller_Action
 {
 
     protected $storage;
@@ -32,7 +32,7 @@ class Admin_UserController extends Zend_Controller_Action
                 $result = Zend_Auth::getInstance()->authenticate($adapter);
                 
                 if (Zend_Auth::getInstance()->hasIdentity())
-                    $this->_redirect('/admin');
+                    $this->_redirect('/');
 
                 
             }

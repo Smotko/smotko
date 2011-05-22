@@ -31,6 +31,11 @@ class IndexController extends Zend_Controller_Action
         //admin added PNPs:
         $pnps = Model_Pnp::getUnconfirmed();
         $this->view->unconfirmedPnps = count($pnps);
+        
+        if(!Zend_Auth::getInstance()->hasIdentity()){
+            $this->view->user = new Form_Login();
+            $this->view->user->setAction('/user/login');
+        }
 
         $this->view->categories = Model_Categories::getAll();
         
