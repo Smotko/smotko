@@ -58,6 +58,8 @@ class Form_Comment extends Zend_Form
                      'ignore' => true
                     
                     ));
+        $sloCaptcha = new Zend_Form_Element_Text('slo_captcha');
+        $sloCaptcha->setLabel('Napiši vse tri šumnike slovenske abecede');
         $post_id = new Zend_Form_Element_Hidden('post_id');
         $user_id = new Zend_Form_Element_Hidden('user_id');
         $save = new Zend_Form_Element_Submit('submit');
@@ -65,12 +67,12 @@ class Form_Comment extends Zend_Form
              ->addDecorators(array('ViewHelper', array('HtmlTag', array('tag'=>'dd', 'class' => ''))))
              ->setLabel('Dodaj');
 
-        $this->addElements(array($userName, /*$password,*/ $userUrl, $description, $honeypot, /*$captcha,*/ $save, $id, $post_id));
+        $this->addElements(array($userName, /*$password,*/ $userUrl, $description, $honeypot, $sloCaptcha, /*$captcha,*/ $save, $id, $post_id));
         
         $user = Zend_Registry::get('User');
         if(is_array($user)){
             unset($user['id']);
-            //$this->removeElement('captcha');
+            $this->removeElement('slo_captcha');
             if(!empty($user['password'])){
                 
 
@@ -86,6 +88,15 @@ class Form_Comment extends Zend_Form
         else{
             $this->removeElement('user_url');
         }
+    }
+    
+    public function isValid($data){
+    	
+        $cap = strtolower($data['slo_captcha']);
+        if(!(strstr($cap,'č') && strstr($cap, 'š') && strstr($cap, 'ž'))){
+            return false;
+        }
+        return parent::isValid($data);
     }
 }
 
