@@ -32,8 +32,8 @@ class Form_Comment extends Zend_Form
                     ->setRequired()
                     ->removeDecorator('label');
 
-        $password = new Zend_Form_Element_Password('password');
-        $password->setLabel('Geslo (ni obvezno):');
+        //$password = new Zend_Form_Element_Password('password');
+        //$password->setLabel('Geslo (ni obvezno):');
         
         $honeypot = new Zend_Form_Element_Textarea('content-longr');
         $honeypot->removeDecorator('label')
@@ -65,7 +65,7 @@ class Form_Comment extends Zend_Form
              ->addDecorators(array('ViewHelper', array('HtmlTag', array('tag'=>'dd', 'class' => ''))))
              ->setLabel('Dodaj');
 
-        $this->addElements(array($userName, $password, $userUrl, $description, $honeypot, $captcha, $save, $id, $post_id));
+        $this->addElements(array($userName, /*$password,*/ $userUrl, $description, $honeypot, $captcha, $save, $id, $post_id));
         
         $user = Zend_Registry::get('User');
         if(is_array($user)){
