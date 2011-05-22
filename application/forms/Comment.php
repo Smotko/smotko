@@ -91,11 +91,12 @@ class Form_Comment extends Zend_Form
     }
     
     public function isValid($data){
-    	
-        $cap = strtolower($data['slo_captcha']);
-        if(!(strstr($cap,'č') && strstr($cap, 'š') && strstr($cap, 'ž'))){
-            return false;
-        }
+    	if(array_key_exists('slo_captcha', $data)){
+	        $cap = strtolower($data['slo_captcha']);
+	        if(!(strstr($cap,'č') && strstr($cap, 'š') && strstr($cap, 'ž'))){
+	            return false;
+	        }
+    	}
         return parent::isValid($data);
     }
 }
