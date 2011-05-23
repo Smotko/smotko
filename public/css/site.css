@@ -77,7 +77,7 @@ a.red                 { color: black; border-color: #730324; }
 
 #content h1           {
                           /*-moz-box-shadow: 0px 1px 2px #555; -webkit-box-shadow: 0px 1px 2px #555; box-shadow: 0px 1px 2px #555;*/
-                          font-size: 18px; color:  #1E729F; margin: 5px 0px; padding: 5px; border-bottom: 2px solid #1E729F; /*text-shadow: black 0px 1px 0px;*/
+                          font-size: 18px; color:  #1E729F; margin: 0px 0px; padding: 5px 0px; border-bottom: 2px solid #1E729F; /*text-shadow: black 0px 1px 0px;*/
                       }
 
 #content h2           { font-size: 16px; color:  #8AB9D2; margin:10px 0px; padding: 5px; border-bottom: 2px solid #8AB9D2;   }
