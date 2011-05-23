@@ -77,20 +77,20 @@ a.red                 { color: black; border-color: #730324; }
 
 #content h1           {
                           /*-moz-box-shadow: 0px 1px 2px #555; -webkit-box-shadow: 0px 1px 2px #555; box-shadow: 0px 1px 2px #555;*/
-                          font-size: 18px; color:  #1E729F; margin: 0px 0px; padding: 5px 0px; border-bottom: 2px solid #1E729F; /*text-shadow: black 0px 1px 0px;*/
+                          font-size: 18px; color:  #1E729F; margin: 0px 0px; padding: 5px 10px; border-bottom: 2px solid #1E729F; /*text-shadow: black 0px 1px 0px;*/
                       }
 
-#content h2           { font-size: 16px; color:  #8AB9D2; margin:10px 0px; padding: 5px; border-bottom: 2px solid #8AB9D2;   }
+#content h2           { text-align:center; font-size: 16px; color:  #8AB9D2; margin:10px 5px; padding: 5px 5px;  border-bottom: 2px solid #8AB9D2;  }
 
-#content h2 a         { color:  white; }
+#content h2 a         { color:  #8AB9D2;  }
 
 #content h3           { padding: 5px 5px 0px 5px; color:gray; }
 
-#content p            { padding: 5px 10px; line-height: 16px; }
+#content p            { padding: 7px 10px; line-height: 16px; }
 
-#content tt         { padding: 0px 10px; display: block; }
+#content tt         { padding: 5px 10px; display: block; }
 
-#content .chat  { background-color: white; }
+#content .chat  { background-color: none; }
 
 #content .chat:hover  { background-color: #FFEAD2; }
 
