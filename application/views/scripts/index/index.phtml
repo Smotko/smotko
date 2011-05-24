@@ -1,6 +1,6 @@
 <div class="grid_12">
   <div class="grid_3 alpha">
-    <div class="boxshadow">
+    <div class="boxshadow grad">
   <h1>Današnji PNP:</h1>
     <?php if($this->isAdmin() && $this->unconfirmedPnps > 0): ?>
     <p class="notice">Št. nepotrjenih <a href="/admin/pnp">PNP</a>jev je <?php echo $this->unconfirmedPnps;?>!</p>
@@ -21,17 +21,17 @@
     <?php endif; ?>
     <p><a href="/pnp">Dodaj svoj PNP</a></p>
     </div>
-    <div class="boxshadow">
+    <div class="boxshadow grad">
     <h1>Zadnji komentarji</h1>
     <?php echo $this->partialLoop('comments/commentLink.phtml', $this->comments); ?>
     </div>
 
-    <div class="boxshadow">
+    <div class="boxshadow grad">
     <h1>Zadnji blogi:</h1>
     <?php echo $this->partialLoop('blog/blog-title.phtml', $this->blogs); ?>
 </div>
 
-    <div class="boxshadow">
+    <div class="boxshadow grad">
     <?php if($this->userId()): ;?>
     <h1>Odjava</h1>
     <p><a href="/user/logout/" title="Uporabno, če stran uporabljate na javnem računalniku.">Odjavi se</a></p>

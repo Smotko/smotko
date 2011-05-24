@@ -143,7 +143,7 @@ form                  { padding: 5px; }
                         background-color:white;
                         
                       }
-.grid_3 .boxshadow {
+.grad {
 
 -moz-border-radius: 10px; /* Firefox */
   -webkit-border-radius: 10px; /* Safari, Chrome */

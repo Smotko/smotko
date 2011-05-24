@@ -22,7 +22,7 @@ class PnpController extends Zend_Controller_Action
         if($form->getElement('password'))
                 $form->getElement('password')->setAttrib ('style', 'width:60px;');
         $form->getElement('submit')->setAttrib('style', 'width: 60px');
-        $form->setAttrib('style', 'text-align:right;');
+        
         $form->setAction('/pnp/add');
 
         $todayPnp = Model_Pnp::getPnpOnDate(date('Y-m-d'));
