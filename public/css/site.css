@@ -32,7 +32,7 @@ a.green               { color: green; border-color: greenyellow; }
 
 a.red                 { color: black; border-color: #730324; }
 
-.header_bg            { background: url('/images/bg.png') repeat-x 0px 42px #16648E; }
+.header_bg            { background-color: #16648E; background-image: url(/images/29-a.png),url(/images/37-a.png),url(/images/59-a.png), url(/images/53-a.png); }
 
 #header               { height: 80px; }
 
