@@ -59,6 +59,7 @@ a.red                 { color: black; border-color: #730324; }
                           -moz-border-radius:5px 5px 0px 0px; -webkit-border-radius:5px 5px 0px 0px; border-radius:5px 5px 0px 0px;
                           float:left; padding:6px; color:white;
                       }
+#menu li.paddless     { padding: 4px; }
 
 #menu li a            { color:white; text-shadow: 0px -1px 2px #000; font-weight: bold; border: none; }
 

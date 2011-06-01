@@ -19,5 +19,6 @@ $(document).ready(function(){
     };
     setTimeout(moveHeader, Math.random()*10000+2000);
     
+    $('.navigation').append('<li class="paddless"><g:plusone size="small" count="false"></g:plusone></li>')
     
 });
