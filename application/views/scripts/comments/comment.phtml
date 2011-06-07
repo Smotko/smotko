@@ -4,7 +4,7 @@
         <p class="comment_meta">
     <?php
     if($this->User['user_url'] != null && $this->User['user_url'] != 'http://')
-        echo '<a href="' . $this->escape($this->User['user_url']) . '" title="'.$this->escape($this->User['user_url']).'">' . $this->escape($this->user_name) . '</a>';
+        echo '<a href="http://' . $this->escape(str_replace ('http://', '', $this->User['user_url'])) . '" title="'.$this->escape($this->User['user_url']).'">' . $this->escape($this->user_name) . '</a>';
     else
         echo '<span class="user" title="Napisano: '. $this->dateTimeFormat($this->created_at) .'">' . $this->escape($this->user_name) . '</span>'; ?>
             <br /><span class="meta"><?php echo $this->dateTimeFormat($this->created_at);?></span>
