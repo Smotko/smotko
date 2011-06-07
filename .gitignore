@@ -1,2 +1,4 @@
 application/cache/*
 .buildpath
+/.settings/
+/nbproject/private/
