@@ -93,7 +93,12 @@ a.red                 { color: black; border-color: #730324; }
 
 #content tt         { padding: 5px 10px; display: block; }
 
-#content .chat  { background-color: none; }
+#content .chat  { 
+                        background-color: none; -moz-border-radius: 10px; /* Firefox */
+                        -webkit-border-radius: 10px; /* Safari, Chrome */
+                        border-radius: 10px; 
+                        
+                }
 
 #content .chat:hover  { background-color: #FFEAD2; }
 
@@ -106,8 +111,6 @@ a.red                 { color: black; border-color: #730324; }
 .comment_dots         { font-weight: bolder; color: #16648E; text-align: center; padding-bottom:5px; display: none;   }
 
 .comment_hidden        { height: 80px; overflow: hidden; }
-
-.emphasize            {  }
 
 .user                 { font-weight: bold; }
 
@@ -188,6 +191,7 @@ form                  { padding: 10px; }
     transform: rotate(3deg);
 
 }
+
 
 
 

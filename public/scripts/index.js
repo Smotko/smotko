@@ -20,6 +20,7 @@ $(document).ready(function(){
             $('.debate_content').html(data);
             $('.debate_content').animate({"opacity": "1"});
             hideLongChat();
+            $('.chat:nth-child(even)').addClass('emphasize');
             //$('.debate_content').fadeIn();
         });
     }
