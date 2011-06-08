@@ -22,7 +22,7 @@ class Zend_View_Helper_PrepareContent {
 //            $text = utf8_decode(substr(utf8_encode($text), 0, $this->length - 40)) . '<span class="comment_dots"> (...)</span><span class="full_comment">' . utf8_decode(substr(utf8_encode($text), $this->length - 40)) . '</span>';
 //            
 //        } 
-        $text = nl2br($this->_view->addLink($text));
+        $text = nl2br(trim($this->_view->addLink($text)));
         return $text; 
     }
     public function setView($view) {
