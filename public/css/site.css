@@ -105,6 +105,8 @@ a.red                 { color: black; border-color: #730324; }
 
 .comment_hidden        { height: 80px; overflow: hidden; }
 
+.emphasize            { background-color: #f8f9fb; }
+
 .user                 { font-weight: bold; }
 
 .pnp                  {

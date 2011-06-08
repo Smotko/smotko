@@ -21,4 +21,6 @@ $(document).ready(function(){
     
     $('.navigation').append('<li class="paddless"><g:plusone size="small" count="false"></g:plusone></li>')
     
+    $('.chat:nth-child(odd)').addClass('emphasize');
+    
 });
