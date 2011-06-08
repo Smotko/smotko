@@ -10,10 +10,10 @@
         <?php echo $this->dateFormat($pnp['date']);?>
     </p>
     <p class="pnp_content">
-        <?php echo $pnp['content'];?>
+        <?php echo $this->prepareContent($pnp['content']);?>
     </p>
     <p class="author">
-       Napisal/a: <?php echo $pnp['User']['user_name']; ?>
+       Napisal/a: <?php echo $this->escape($pnp['User']['user_name']); ?>
     </p>
     </div>
     <?php if($last):?>
