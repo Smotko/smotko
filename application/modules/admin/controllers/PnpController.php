@@ -126,7 +126,7 @@ class Admin_PnpController extends Zend_Controller_Action
         $id = $this->getRequest()->getParam('id');
 
         if(empty($id))
-            throw Exception("No id");
+            throw new Exception("No id");
               
         $pnp = Model_Pnp::findById($id);
         $pnp->delete();
