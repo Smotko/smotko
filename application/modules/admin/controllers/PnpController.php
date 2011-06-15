@@ -120,6 +120,19 @@ class Admin_PnpController extends Zend_Controller_Action
                     ->fetchArray();
         $this->view->pnps = $pnp;
     }
+    
+    public function deleteAction()
+    {
+        $id = $this->getRequest()->getParam('id');
+
+        if(empty($id))
+            throw Exception("No id");
+              
+        $pnp = Model_Pnp::findById($id);
+        $pnp->delete();
+
+        $this->_redirect('/admin/pnp/');
+    }
 
 
 }

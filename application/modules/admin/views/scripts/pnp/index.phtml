@@ -6,7 +6,12 @@
 <h2>Nepotrjeni:</h2>
 <ul>
 <?php foreach($this->unconfirmed as $pnp):?>
-    <li><a href="/admin/pnp/index/id/<?php echo $pnp['id'];?>"><?php echo $pnp['content'];?></a> Napisal/a: <?php echo $pnp['User']['user_name'];?></li>
+    <li>
+        <a href="/admin/pnp/delete/id/<?php echo $pnp['id']?>">
+                  <img src="/images/icons/delete.png" alt="Zbriši" title="Zbriši" />
+              </a>
+        
+        <a href="/admin/pnp/index/id/<?php echo $pnp['id'];?>"><?php echo $pnp['content'];?></a> Napisal/a: <?php echo $pnp['User']['user_name'];?></li>
 <?php endforeach; ?>
 </ul>
 </div>
