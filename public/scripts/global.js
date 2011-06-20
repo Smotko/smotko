@@ -3,8 +3,8 @@ $(document).ready(function(){
     $('.hide_msg').click(function(){
         $(this).parent().parent().hide();
     });
-    $('.header_bg');
-    var bg = 0;
+    var bg = Math.random()*10000;
+    $('.header_bg').css({backgroundPosition: bg + 'px 0px'});
     moveHeader = function(){
     	var newbg;
     	if (Math.random() < 0.5){
@@ -13,7 +13,7 @@ $(document).ready(function(){
     	else{
     		newbg = bg + Math.floor(Math.random()*100) + 50;
     	}
-    	$('.header_bg').css({backgroundPosition: bg + 'px 0px'}).animate({backgroundPosition: newbg+'px +0px'}, 'slow', 'swing');
+    	$('.header_bg').css({backgroundPosition: bg + 'px 0px'}).animate({backgroundPositionX: newbg+'px'}, 'slow', 'swing');
     	bg = newbg;
     	setTimeout(moveHeader, Math.random()*10000+2000)
     };
