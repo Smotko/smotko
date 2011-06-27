@@ -21,4 +21,9 @@ $(document).ready(function(){
     
     $('.chat:nth-child(odd)').addClass('emphasize');
     
+    $.movableShadow($(".site_title"), 'black', 'text-shadow');
+    $.movableShadow($("#menu li a").not('.active'), 'black', 'text-shadow');
+
+
+    
 });

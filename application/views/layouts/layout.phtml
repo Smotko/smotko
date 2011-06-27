@@ -10,7 +10,8 @@
                             ->appendStylesheet($this->baseUrl().'/css/960.css')
                             ->appendStylesheet($this->baseUrl().'/css/site.css');
        //echo $this->headScript()->appendFile('/ckeditor/ckeditor.js', $type = 'text/javascript');
-       echo $this->headScript()->prependFile($this->baseUrl() . '/scripts/global.js', $type = 'text/javascript')
+       echo $this->headScript()->prependFile($this->baseUrl() . '/scripts/shadow.js', $type = 'text/javascript')
+                               ->prependFile($this->baseUrl() . '/scripts/global.js', $type = 'text/javascript')
                                ->prependFile('http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', $type = 'text/javascript');?>
 <link rel="alternate" type="application/rss+xml" title="Blog RSS" href="/blogs/rss" />
 <?php if(Model_Settings::findActiveParam('site_css') != ""): ?>

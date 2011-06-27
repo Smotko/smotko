@@ -34,9 +34,11 @@ a.red                 { color: black; border-color: #730324; }
 
 .header_bg            { background-color: #16648E; background-image: url(/images/29-a.png),url(/images/37-a.png),url(/images/59-a.png), url(/images/53-a.png); }
 
+.site_title           { text-shadow: 0px 1px 2px #000; }
+
 #header               { height: 80px; }
 
-#header h1 a          { font-size: 40px; color: white; line-height: 64px; margin-top: 6px; text-shadow: 0px 1px 2px #000; float:left; }
+#header h1 a          { font-size: 40px; color: white; line-height: 64px; margin-top: 6px; float:left; }
 
 #header h1 a:hover    { text-decoration: none; }
 
