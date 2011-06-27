@@ -104,7 +104,7 @@ a.red                 { color: black; border-color: #730324; }
 
 #content p.comment_meta         { padding-right: 0px; }
 
-#content p.comment_content      { padding-left: 0px; overflow: hidden; }
+#content div.comment_content      { padding-left: 0px; overflow: hidden; }
 
 #new_debate             { background-color: #CCE6F4; padding: 10px; text-align: center; cursor: pointer; display: none;  }
 
