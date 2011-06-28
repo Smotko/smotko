@@ -89,7 +89,7 @@ a.red                 { color: black; border-color: #730324; }
 
 #content h3           { font-size: 16px; color:  #8AB9D2; margin:10px 5px; padding: 5px 5px;  border-bottom: 2px solid #8AB9D2;}
 
-#content p            { padding: 7px 10px; line-height: 20px; }
+p            { padding: 7px 10px; line-height: 20px; }
 
 #content tt         { padding: 5px 10px; display: block; }
 
@@ -104,7 +104,13 @@ a.red                 { color: black; border-color: #730324; }
 
 #content p.comment_meta         { padding-right: 0px; }
 
-#content div.comment_content      { padding-left: 0px; overflow: hidden; }
+.comment_content      { padding-left: 0px; overflow: hidden; padding: 7px 10px; line-height: 22px; }
+
+.comment_content p    { padding: 0px; }
+
+.comment_content pre  { padding: 7px; }
+
+.comment_content pre, code { background-color: lightgrey; }
 
 #new_debate             { background-color: #CCE6F4; padding: 10px; text-align: center; cursor: pointer; display: none;  }
 
@@ -134,7 +140,7 @@ a.red                 { color: black; border-color: #730324; }
 
 #footer               { background-color: #2c2c2c; }
 
-#footer p        { text-align: center; color:white; font-size: small; line-height: 40px; }
+#footer p        { text-align: center; color:white; font-size: small; line-height: 28px; }
 
 form                  { padding: 10px; }
 
