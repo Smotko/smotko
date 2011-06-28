@@ -11,7 +11,7 @@ class Zend_View_Helper_PrepareContent {
     {
         //if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'blog')
                 //$this->length *= 4;
-        $text = nl2br(Markdown($this->_view->escape($text)));
+        $text = (Markdown($this->_view->escape($text)));
 //        $noLines = split("\n", $text);
 //
 //        if(count($noLines) > $this->newLines){
