@@ -7,21 +7,16 @@ class Zend_View_Helper_PrepareContent {
     
     private $_view;
     
-    public function prepareContent($text)
+    public function prepareContent($text, $markdown)
     {
-        //if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'blog')
-                //$this->length *= 4;
-        $text = (Markdown(($text)));
-//        $noLines = split("\n", $text);
-//
-//        if(count($noLines) > $this->newLines){
-//            $text = join("\n", array_slice($noLines, 0, 5)) . '<span class="comment_dots"> (...)</span><span class="full_comment">' . join("\n", array_slice($noLines, 5)) . '</span>';
-//        }
-//        else if(strlen($this->_view->addLink($text)) > $this->length){
-//            $text = utf8_decode(substr(utf8_encode($text), 0, $this->length - 40)) . '<span class="comment_dots"> (...)</span><span class="full_comment">' . utf8_decode(substr(utf8_encode($text), $this->length - 40)) . '</span>';
-//            
-//        } 
-        $text = (trim(($text)));
+        $text = $this->_view->escape($text);
+        if($markdown)
+            $text = Markdown($text);
+        else{
+            
+            $text = nl2br(trim($this->_view->addLink($text)));
+        }
+        $text = trim($text);
         return $text; 
     }
     public function setView($view) {

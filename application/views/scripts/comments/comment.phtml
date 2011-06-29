@@ -24,7 +24,7 @@
 
     <div class="grid_<?php if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'index' || Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'api') echo '7'; else if(Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'blog') echo '10'; else echo '7';?> omega">
 
-    <div class="comment_content"><?php echo $this->prepareContent($this->content); ?></div>
+    <div class="comment_content"><?php echo $this->prepareContent($this->content, $this->markdown); ?></div>
     <div class="comment_dots">...</div>
     </div>
     <div class="clear"></div>

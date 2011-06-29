@@ -85,12 +85,14 @@ class Form_Comment extends Zend_Form
             }
             else{
                 $this->removeElement('user_url');
+                $this->removeElement('markdown');
             }
             //$this->removeElement('password');
             $this->populate($user);
         }
         else{
             $this->removeElement('user_url');
+            $this->removeElement('markdown');
         }
     }
     
