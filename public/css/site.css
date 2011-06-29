@@ -10,7 +10,7 @@
 /*
 * { font-family: 'Ubuntu', arial, serif; }
 */
-html, body            { height: 100%; background-color: white; font-size: 14px; font-family: Arial; }
+html, body            { height: 100%; font-size: 14px; font-family: Arial; z-index:-10; }
 
 a                     { font-weight: bold; text-decoration: none; color:#FB9924;  }
 
@@ -75,7 +75,7 @@ a.red                 { color: black; border-color: #730324; }
 
 #content              {
                           -moz-border-radius:5px 5px 0px 0px; -webkit-border-radius:5px 5px 0px 0px; border-radius:5px 5px 0px 0px;
-                          background: white; overflow: hidden; padding: 0px 0px 10px 0px;
+                          overflow: hidden; padding: 0px 0px 10px 0px;
                       }
 
 #content h1           {
@@ -107,7 +107,7 @@ a.red                 { color: black; border-color: #730324; }
 
 .comment_hidden        { height: 80px; overflow: hidden; }
 
-.emphasize            { background-color: #f8f9fb; }
+.emphasize            {  }
 
 .user                 { font-weight: bold; }
 
@@ -141,22 +141,54 @@ form                  { padding: 10px; }
 
 .justify              { text-align: justify; overflow: hidden;}
 
+.chat{ border-bottom: 1px solid #DDD; }
 
 .boxshadow {
-            position:relative;
-            margin-top: 15px; overflow: hidden;
-            background:#fff;
-            -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-        }
 
-                     
-.grad {
+    position:relative;
 
+    margin-top: 20px;
+    padding: 5px 0px;
+    background:#fff;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
+
+.boxshadow:before,
+.boxshadow:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+    bottom: 15px;
+    left: 10px;
+    width: 120px;
+    height: 40px;
+    max-width: 300px;
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
 
 
 }
+
+
+.boxshadow:after{
+     right:10px;
+     left:auto;
+     -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+
+}
+
 
 
 

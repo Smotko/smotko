@@ -5,7 +5,8 @@
                             ->appendName('keywords', $this->escape(Model_Settings::findActiveParam('keywords')) . $this->categoriesList()); ?>
 
 <?php echo $this->headTitle()."\n"; ?>
-<?php echo $this->headLink(array('rel' => 'shortcut icon', 'href' => '/favicon.ico'))->appendStylesheet($this->baseUrl().'/css/reset.css')
+<?php echo $this->headLink(array('rel' => 'shortcut icon', 'href' => '/favicon.ico'))
+                            ->appendStylesheet($this->baseUrl().'/css/reset.css')
                             //->appendStylesheet($this->baseUrl().'/css/text.css')
                             ->appendStylesheet($this->baseUrl().'/css/960.css')
                             ->appendStylesheet($this->baseUrl().'/css/site.css');
