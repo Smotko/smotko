@@ -125,6 +125,7 @@ Comments:
     user_email: string(200)
     user_url: string(200)
     content: string(1000)
+    markdown: boolean
   relations:
     User:
       local: user_id
@@ -143,6 +144,7 @@ Debate:
     user_email: string(200)
     user_url: string(200)
     content: string(1000)
+    markdown: boolean
   relations:
     User:
       local: user_id

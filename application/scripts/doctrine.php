@@ -11,6 +11,7 @@ defined('APPLICATION_ENV')
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
     realpath(APPLICATION_PATH . '/../library'),
+    realpath('/usr/share/php/libzend-framework-php'),
     get_include_path()
 )));
 
@@ -23,7 +24,7 @@ $application = new Zend_Application(
     APPLICATION_PATH . '/configs/application.ini'
 );
 
-$application->getBootstrap()->bootstrap('doctrine');
+$application->getBootstrap()->bootstrap();
 
 $config = $application->getOption('doctrine');
 $cli = new Doctrine_Cli($config);

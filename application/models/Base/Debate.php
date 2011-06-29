@@ -10,6 +10,7 @@
  * @property string $user_email
  * @property string $user_url
  * @property string $content
+ * @property boolean $markdown
  * @property Model_User $User
  * 
  * @package    ##PACKAGE##
@@ -40,6 +41,9 @@ abstract class Model_Base_Debate extends Doctrine_Record
         $this->hasColumn('content', 'string', 1000, array(
              'type' => 'string',
              'length' => '1000',
+             ));
+        $this->hasColumn('markdown', 'boolean', null, array(
+             'type' => 'boolean',
              ));
     }
 
