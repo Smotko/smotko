@@ -7,7 +7,7 @@ class Zend_View_Helper_PrepareContent {
     
     private $_view;
     
-    public function prepareContent($text, $markdown)
+    public function prepareContent($text, $markdown=false)
     {
         $text = $this->_view->escape($text);
         if($markdown)
