@@ -39,11 +39,10 @@ class DebateController extends Zend_Controller_Action
                 }
                 
                 $debata->fromArray($debate->getValues());
-                
+
                 if($debata->user_url == null)
                         $debata->user_url = 'http://';
-                if(!$editing){
-                    
+                if(!$editing){                    
                     $debata->User = Model_User::setUser($debate->getValues());
                     $debata->User->debateCount++;
                     $debata->User->save();

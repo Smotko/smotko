@@ -25,6 +25,10 @@ class Form_Comment extends Zend_Form
         $userUrl->setLabel('Spletna stran:')
                 ->addValidator(new Smotko_Validate_Url());
         
+        $markdown = new Zend_Form_Element_Checkbox('markdown');
+        $markdown->addDecorator('label', array('placement' => 'append'))
+                 ->setLabel('Markdown');
+        
         $description = new Zend_Form_Element_Textarea('content');
         $description->setLabel('Sporočilo:')
                     ->setAttrib('id', 'debate_text')
@@ -67,7 +71,7 @@ class Form_Comment extends Zend_Form
              ->addDecorators(array('ViewHelper', array('HtmlTag', array('tag'=>'dd', 'class' => ''))))
              ->setLabel('Dodaj');
 
-        $this->addElements(array($userName, /*$password,*/ $userUrl, $description, $honeypot, $sloCaptcha, /*$captcha,*/ $save, $id, $post_id));
+        $this->addElements(array($userName, /*$password,*/ $userUrl, $markdown, $description, $honeypot, $sloCaptcha, /*$captcha,*/ $save, $id, $post_id));
         
         $user = Zend_Registry::get('User');
         if(is_array($user)){
