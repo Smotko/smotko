@@ -94,9 +94,8 @@ p            { padding: 7px 10px; line-height: 20px; }
 #content tt         { padding: 5px 10px; display: block; }
 
 #content .chat  { 
-                        background-color: none; -moz-border-radius: 10px; /* Firefox */
-                        -webkit-border-radius: 10px; /* Safari, Chrome */
-                        border-radius: 10px; 
+                        background-color: none; 
+
                         
                 }
 
@@ -110,7 +109,13 @@ p            { padding: 7px 10px; line-height: 20px; }
 
 .comment_content pre  { padding: 7px; }
 
-.comment_content pre, code { background-color: lightgrey; }
+.comment_content pre, code { background-color: #e5ecf9; padding: 4px; margin: 0px; }
+
+.comment_content h1, h2, h3, h4, h5, h6 { text-align: left !important; color: black !important; border-bottom: none !important;  }
+
+.comment_content ul { list-style-type: disc; padding-left:14px; }
+
+.comment_content ol { list-style-type: decimal; padding-left:22px;}
 
 #new_debate             { background-color: #CCE6F4; padding: 10px; text-align: center; cursor: pointer; display: none;  }
 
@@ -217,7 +222,10 @@ textarea, input       {
     max-width: 160px;
      
     }
-
+    .grad{
+        
+        background-color: #e5ecf9;
+    }
 label.required        { font-weight: bold; }
 
 textarea              { width:95%; max-width: 999px; }
