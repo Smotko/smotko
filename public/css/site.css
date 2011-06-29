@@ -122,6 +122,8 @@ p            { padding: 7px 10px; line-height: 20px; }
 
 .comment_content ol { list-style-type: decimal; padding-left:22px;}
 
+.comment_content hr { border-style: solid; border-color: #EEE; }
+
 #new_debate             { background-color: #CCE6F4; padding: 10px; text-align: center; cursor: pointer; display: none;  }
 
 .comment_dots         { font-weight: bolder; color: #16648E; text-align: center; padding-bottom:5px; display: none;   }
@@ -182,7 +184,7 @@ form                  { padding: 10px; }
     bottom: 15px;
     left: 10px;
     width: 120px;
-    height: 40px;
+    height: 10px;
     max-width: 300px;
     -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
