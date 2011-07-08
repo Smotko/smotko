@@ -126,7 +126,14 @@ p            { padding: 7px 10px; line-height: 20px; }
 
 #new_debate             { background-color: #CCE6F4; padding: 10px; text-align: center; cursor: pointer; display: none;  }
 
-.comment_dots         { font-weight: bolder; color: #16648E; text-align: center; padding-bottom:5px; display: none;   }
+.comment_dots         { 
+    
+    font-weight: bolder; color: #16648E; background-color: #e5ecf9; 
+    text-align: center; padding-bottom:5px; display: none;
+    border-top-left-radius: 100px;
+
+
+}
 
 .comment_hidden        { height: 80px; overflow: hidden; }
 
@@ -135,6 +142,7 @@ p            { padding: 7px 10px; line-height: 20px; }
 .pnp                  {
                           -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
                           background-color: #e5ecf9; padding: 5px 0px; margin-bottom: 10px;
+
                       }
 
 .pnp_content          { text-align: center; }
