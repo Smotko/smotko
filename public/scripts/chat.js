@@ -1,6 +1,6 @@
 function hideLongChat(){
-    var MAX_HEIGHT = 140;
-    var SET_HEIGHT = 106;
+    var MAX_HEIGHT = 240;
+    var SET_HEIGHT = 218;
     
     $('.comment_content').each(function(){
         if($(this).height() > MAX_HEIGHT){
