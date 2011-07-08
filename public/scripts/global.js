@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.hide_msg').click(function(){
         $(this).parent().parent().hide();
     });
+    
     var bg = Math.random()*10000;
     $('.header_bg').css({backgroundPosition: bg + 'px 0px'});
     moveHeader = function(){
