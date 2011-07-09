@@ -21,11 +21,22 @@ function hideLongChat(){
     }, function(){
         if($('.comment_content', this).height() > MAX_HEIGHT)
         {
+            if($('.comment_content', this).data('persist'))
+                return
             $('.comment_dots', this).show();
             $('.comment_content', this).animate( {height: SET_HEIGHT}, {duration: 200, easing: 'swing', queue: false});
             $('.comment_dots', this).animate( {opacity: 1}, {duration: 200, easing: 'swing', queue: false});
         }
     });
+    
+    $('.chat').click(function(){
+        if($('.comment_content', this).data('persist'))
+            $('.comment_content', this).data('persist', false)
+        else
+            $('.comment_content', this).data('persist', true)
+       
+    });
+    
 }
 $(document).ready(function(){
     hideLongChat();
