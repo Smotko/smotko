@@ -30,11 +30,14 @@ function hideLongChat(){
     });
     
     $('.chat').click(function(){
-        if($('.comment_content', this).data('persist'))
-            $('.comment_content', this).data('persist', false)
-        else
+        if($('.comment_content', this).data('persist')){
+            $('.comment_content', this).data('persist', false);
+            $(this).removeClass('pinned');
+        }
+        else{
             $('.comment_content', this).data('persist', true)
-       
+            $(this).addClass('pinned');
+        }  
     });
     
 }

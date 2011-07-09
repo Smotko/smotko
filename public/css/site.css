@@ -153,6 +153,8 @@ p            { padding: 7px 10px; line-height: 20px; }
 
 .newer                { display: inline-block; padding: 5px; }
 
+.pinned               { background-color: #E5ECF9; }
+
 .wrapper              { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -40px; }
 .footer, .push        { height: 40px; }
 
@@ -168,7 +170,9 @@ form                  { padding: 10px; }
 
 .justify              { text-align: justify; overflow: hidden;}
 
-.chat{ border-bottom: 1px solid #DDD; }
+.debate_content .chat{ border-bottom: 1px solid #DDD; cursor: pointer; }
+
+.chat .comment_content { cursor: text; }
 
 .boxshadow {
 
