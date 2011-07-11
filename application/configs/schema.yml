@@ -155,6 +155,7 @@ Pnp:
     user_id: integer
     content: string(255)
     date: date
+    markdown: boolean
   relations:
     User:
       local: user_id

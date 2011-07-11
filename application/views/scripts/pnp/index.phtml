@@ -10,7 +10,7 @@
         <?php echo $this->dateFormat($pnp['date']);?>
     </p>
     <p class="pnp_content">
-        <?php echo $this->prepareContent($pnp['content']);?>
+        <?php echo $this->prepareContent($pnp['content'], $pnp['markdown']);?>
     </p>
     <p class="author">
        Napisal/a: <?php echo $this->escape($pnp['User']['user_name']); ?>

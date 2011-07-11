@@ -8,6 +8,7 @@
  * @property integer $user_id
  * @property string $content
  * @property date $date
+ * @property boolean $markdown
  * @property Model_User $User
  * 
  * @package    ##PACKAGE##
@@ -29,6 +30,9 @@ abstract class Model_Base_Pnp extends Doctrine_Record
              ));
         $this->hasColumn('date', 'date', null, array(
              'type' => 'date',
+             ));
+        $this->hasColumn('markdown', 'boolean', null, array(
+             'type' => 'boolean',
              ));
     }
 
