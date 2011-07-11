@@ -40,6 +40,14 @@ function hideLongChat(){
         }  
     });
     
+    $('.chat').mousedown(function(){
+       $(this).css('position', 'relative');
+       $(this).css('top', '1px');
+    });
+    $('.chat').mouseup(function(){
+       $(this).css('top', '0px');
+    });
+    
 }
 $(document).ready(function(){
     hideLongChat();
