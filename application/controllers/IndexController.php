@@ -39,6 +39,8 @@ class IndexController extends Zend_Controller_Action
 
         $this->view->categories = Model_Categories::getAll();
         
+        $this->view->users = Model_User::getActiveUsers();
+        
     }
     public function logoutAction()
     {

@@ -1,11 +1,11 @@
 <div class="grid_9 boxshadow">
-    <h1>PNPji:</h1>
+    
     <?php $i = 0; $first = true; $last = false; foreach($this->pnp as $pnp):?>
     <?php if($i % 3 == 0) $first = true; else $first = false;
            if($i % 3 == 2) $last = true; else $last = false;
            $i++;
     ?>
-    <div class="chat grid_3<?php if($first) echo ' alpha'; else if($last) echo ' omega'?>">
+    <div class="pnp chat grid_3<?php if($first) echo ' alpha'; else if($last) echo ' omega'?>">
     <p class="meta">
         <?php echo $this->dateFormat($pnp['date']);?>
     </p>

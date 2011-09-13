@@ -6,10 +6,11 @@ return array(
       'label' => 'Index',
       'uri' => '/',
     ),
+    /*
     array(
       'label' => 'Blog',
       'uri' => '/blogs'
-    ),
+    ),*/
     array(
       'label' => 'Debate',
       'uri' => '/debate'
