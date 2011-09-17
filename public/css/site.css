@@ -312,7 +312,16 @@ p {
 .user {
 	font-weight: bold;
 }
+.zgovorni {
 
+	list-style-type: decimal;
+	padding: 0px 30px;
+}
+
+.zgovorni li {
+
+	padding: 5px 0px 5px 0px;
+}
 .pnp {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -321,6 +330,18 @@ p {
 	color: black;
 	padding: 5px 0px;
 	margin-bottom: 10px;
+}
+
+.pnp-index {
+	color:white;
+	font-weight: bold;
+	font-size: 16px;
+
+	
+}
+
+.pnp-index .chat {
+	background-color: none !important;
 }
 
 .pnp_content {

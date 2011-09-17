@@ -13,13 +13,13 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
 
     </div>
   <div class="grid_3 omega">
-    <div class="boxshadow grad pnp">
+    <div class="boxshadow grad pnp-index">
 
     <?php if($this->isAdmin() && $this->unconfirmedPnps > 0): ?>
     <p class="notice">Št. nepotrjenih <a href="/admin/pnp">PNP</a>jev je <?php echo $this->unconfirmedPnps;?>!</p>
     <?php endif ?>
     <?php if($this->pnp):?>
-    <div class="chat">
+    <div>
     <p class="meta">
         <?php echo $this->dateFormat($this->pnp['date']);?>
     </p>
@@ -58,11 +58,11 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
     <?php endif; ?>
 <div class="boxshadow grad">
     <h1>Najbolj zgovorni:</h1>
-    <ul>
+    <ol class="zgovorni">
     <?php foreach($this->users as $usr): ?>
     <li><a href="#" title="Št. prispevkov: <?php echo $usr['debateCount'];?>"><?php echo $usr['user_name'];?></a></li>
     <?php endforeach; ?>
-    </ul>
+    </ol>
 </div>
   </div>
 </div>
