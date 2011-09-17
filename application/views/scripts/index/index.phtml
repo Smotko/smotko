@@ -19,10 +19,8 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
     <p class="notice">Št. nepotrjenih <a href="/admin/pnp">PNP</a>jev je <?php echo $this->unconfirmedPnps;?>!</p>
     <?php endif ?>
     <?php if($this->pnp):?>
-    <div>
-    <p class="meta">
-        <?php echo $this->dateFormat($this->pnp['date']);?>
-    </p>
+    <div title="<?php echo $this->dateFormat($this->pnp['date']);?>">
+    
     <p class="pnp_content">
         <?php echo $this->prepareContent($this->pnp['content'], $this->pnp['markdown']); ?>
     </p>

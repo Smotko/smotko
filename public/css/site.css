@@ -418,8 +418,11 @@ form {
 }
 
 .debate_content .chat {
-	border-bottom: 1px solid #DDD;
 	cursor: pointer;
+}
+
+.emphasize{
+	background-color:#FBFBFB;
 }
 
 .chat .comment_content {
@@ -428,7 +431,7 @@ form {
 
 .boxshadow {
 
-	padding:10px 0px;
+	padding:0px 0px;
 }
 
 /*
@@ -543,7 +546,11 @@ input[type=submit]:active,input[type=reset]:active,input[type=button]:active,inp
 }
 
 .message {
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
 	padding: 5px 0px;
+	margin-bottom: 10px;
 	font-weight: bolder;
 	font-size: 15px;
 	color: black;
