@@ -10,7 +10,7 @@
 * { font-family: 'Ubuntu', arial, serif; }
 */
 body {
-
+	
 	font-size: 14px;
 	font-family: Arial;
 	z-index: -10;
@@ -46,15 +46,15 @@ ul {
 
 ul.list li {
 	padding: 5px;
+	
 }
 
 ul.list li:hover {
-	background: #e5ecf9;
-	border-radius: 5px;
+
 }
 
 li.current {
-	background-color: #e5ecf9;
+	color:white;
 }
 
 a.green {
@@ -63,7 +63,7 @@ a.green {
 }
 
 a.red {
-	color: black;
+
 	border-color: #730324;
 }
 
@@ -192,7 +192,7 @@ a.red {
 	font-size: 18px;
 	color: #1E729F;
 	margin: 0px 0px;
-	padding: 0px 10px 10px 10px;
+	padding: 10px 0px 5px 0px;
 
 }
 
@@ -218,7 +218,7 @@ a.red {
 }
 
 p {
-	padding: 7px 10px;
+	padding: 5px 10px;
 	line-height: 20px;
 
 }
@@ -230,11 +230,11 @@ p {
 
 #content .chat {
 	background-color: none;
-	padding: 5px 0px;
+	padding-top: 5px;
 }
 
 #content .chat:hover {
-	background-color: #FFEAD2;
+
 }
 
 #content p.comment_meta {
@@ -594,7 +594,7 @@ input[type=submit]:active,input[type=reset]:active,input[type=button]:active,inp
 }
 
 p.notice {
-	background-color: #fefc77;
+	font-size: 12px;
 }
 
 p#sadFace {
