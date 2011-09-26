@@ -30,7 +30,7 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
 
     </div>
     <?php endif; ?>
-    <p><a href="/pnp">Dodaj svoj PNP</a></p>
+    <p><a href="/pnp">Dodaj PNP</a></p>
     </div>
 <!--    <div class="boxshadow grad">
     <h1>Zadnji komentarji</h1>
@@ -44,24 +44,33 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
 -->
     <div class="boxshadow grad">
     <?php if($this->userId()): ;?>
-    <h1>Odjava</h1>
-    <p><a href="/user/logout/" title="Uporabno, če stran uporabljate na javnem računalniku.">Odjavi se</a></p>
-    </div>
-    <?php else: ?>
-    <h1>Prijava</h1>
+    <div class="boxshadow grad">
 
-    <?php echo $this->user; ?>
-
-    </div>
-    <?php endif; ?>
-<div class="boxshadow grad">
-    <h1>Najbolj zgovorni:</h1>
     <ol class="zgovorni">
     <?php foreach($this->users as $usr): ?>
     <li><a href="#" title="Št. prispevkov: <?php echo $usr['debateCount'];?>"><?php echo $usr['user_name'];?></a></li>
     <?php endforeach; ?>
     </ol>
 </div>
+    <p><a href="/user/logout/" title="Uporabno, če stran uporabljate na javnem računalniku.">Odjavi se</a></p>
+    </div>
+    <?php else: ?>
+
+
+    <?php echo $this->user; ?>
+
+    </div>
+    <?php endif; ?>
+<!--
+<div class="boxshadow grad">
+
+    <ol class="zgovorni">
+    <?php foreach($this->users as $usr): ?>
+    <li><a href="#" title="Št. prispevkov: <?php echo $usr['debateCount'];?>"><?php echo $usr['user_name'];?></a></li>
+    <?php endforeach; ?>
+    </ol>
+</div>
+-->
   </div>
 </div>
 

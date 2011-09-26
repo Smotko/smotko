@@ -32,11 +32,11 @@ function hideLongChat(){
     $('.chat').click(function(){
         if($('.comment_content', this).data('persist')){
             $('.comment_content', this).data('persist', false);
-            $(this).removeClass('pinned');
+            //$(this).removeClass('pinned');
         }
         else{
             $('.comment_content', this).data('persist', true)
-            $(this).addClass('pinned');
+            //$(this).addClass('pinned');
         }  
     });
     
