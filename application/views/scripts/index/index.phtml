@@ -44,14 +44,7 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
 -->
     <div class="boxshadow grad">
     <?php if($this->userId()): ;?>
-    <div class="boxshadow grad">
 
-    <ol class="zgovorni">
-    <?php foreach($this->users as $usr): ?>
-    <li><a href="#" title="Št. prispevkov: <?php echo $usr['debateCount'];?>"><?php echo $usr['user_name'];?></a></li>
-    <?php endforeach; ?>
-    </ol>
-</div>
     <p><a href="/user/logout/" title="Uporabno, če stran uporabljate na javnem računalniku.">Odjavi se</a></p>
     </div>
     <?php else: ?>
