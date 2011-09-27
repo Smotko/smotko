@@ -397,13 +397,13 @@ p {
 }
 
 form {
-	padding: 10px;
+	padding: 0px 10px 10px 10px;
 }
 
 #debate dt {
 	display: inline;
 	padding: 2px;
-	color: #256C93;
+
 }
 
 #debate dd {
