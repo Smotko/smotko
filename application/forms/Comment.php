@@ -96,6 +96,30 @@ class Form_Comment extends Zend_Form
         }
     }
     
+    public function setPnp(){
+    	
+    	$this->removeElement('user_url');
+    	if($this->getElement('captcha'))
+    	$this->getElement('captcha')->setAttrib('style', 'width:40px;')
+    	->setOptions(array('captcha' => array('captcha' => 'Figlet','wordLen' => 2)));
+    	if($this->getElement('password'))
+    	$this->getElement('password')->setAttrib ('style', 'width:60px;');
+    	$this->getElement('submit')->setAttrib('style', 'width: 60px');
+    	
+    	$this->setAction('/pnp/add');
+    	
+    	$todayPnp = Model_Pnp::getPnpOnDate(date('Y-m-d'));
+    	if(!$todayPnp)
+    	{
+    		$dateElement = new Zend_Form_Element_Hidden('date');
+    		$date = new Zend_Date();
+    	
+    		$dateElement->setValue($date->toString(Zend_Date::DATE_MEDIUM));
+    		$this->addElement($dateElement);
+    	}
+    	return $this;
+    }
+    
     public function isValid($data){
     	if(array_key_exists('slo_captcha', $data)){
 	        $cap = strtolower($data['slo_captcha']);

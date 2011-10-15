@@ -15,25 +15,7 @@ class PnpController extends Zend_Controller_Action
         $paginator->setDefaultItemCountPerPage(30);
         $this->view->pnp = $paginator;
         $form = new Form_Comment();
-        $form->removeElement('user_url');
-        if($form->getElement('captcha'))
-            $form->getElement('captcha')->setAttrib('style', 'width:40px;')
-                                        ->setOptions(array('captcha' => array('captcha' => 'Figlet','wordLen' => 2)));
-        if($form->getElement('password'))
-                $form->getElement('password')->setAttrib ('style', 'width:60px;');
-        $form->getElement('submit')->setAttrib('style', 'width: 60px');
-        
-        $form->setAction('/pnp/add');
-
-        $todayPnp = Model_Pnp::getPnpOnDate(date('Y-m-d'));
-        if(!$todayPnp)
-        {
-            $dateElement = new Zend_Form_Element_Hidden('date');
-            $date = new Zend_Date();
-
-            $dateElement->setValue($date->toString(Zend_Date::DATE_MEDIUM));
-            $form->addElement($dateElement);
-        }
+        $form->setPnp();
 
         $this->view->form = $form;
     }

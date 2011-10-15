@@ -41,6 +41,10 @@ class IndexController extends Zend_Controller_Action
         
         $this->view->users = Model_User::getActiveUsers();
         
+        $pnp_form = new Form_Comment();
+        $pnp_form->setPnp();
+        $this->view->pnp_form = $pnp_form;
+        
     }
     public function logoutAction()
     {
