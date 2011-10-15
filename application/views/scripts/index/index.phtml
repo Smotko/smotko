@@ -14,13 +14,14 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
     </div>
   <div class="grid_3 omega">
     <div class="pnp">
-    <p class="meta">
-    <?php echo $this->dateFormat($this->pnp['date']);?>
-        </p>
+
     <?php if($this->isAdmin() && $this->unconfirmedPnps > 0): ?>
     <p class="notice">Št. nepotrjenih <a href="/admin/pnp">PNP</a>jev je <?php echo $this->unconfirmedPnps;?>!</p>
     <?php endif ?>
     <?php if($this->pnp):?>
+    <p class="meta">
+    <?php echo $this->dateFormat($this->pnp['date']);?>
+    </p>
     <div title="<?php echo $this->dateFormat($this->pnp['date']);?>">
     
     <p class="pnp_content">
@@ -31,8 +32,9 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
     </p>
 
     </div>
+
     <?php endif; ?>
-    <p><a href="/pnp">Dodaj PNP</a></p>
+    <p><a href="/pnp" id="add-pnp">Dodaj PNP</a></p>
     <div id="pnp-form"><?php echo $this->pnp_form?></div>
     </div>
 <!--    <div class="boxshadow grad">

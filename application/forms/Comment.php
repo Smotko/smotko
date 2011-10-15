@@ -117,6 +117,7 @@ class Form_Comment extends Zend_Form
     		$dateElement->setValue($date->toString(Zend_Date::DATE_MEDIUM));
     		$this->addElement($dateElement);
     	}
+    	$this->setIdSuffix('pnp');
     	return $this;
     }
     
@@ -129,5 +130,22 @@ class Form_Comment extends Zend_Form
     	}
         return parent::isValid($data);
     }
+    
+    public function setIdSuffix($suffix)
+    {
+    	$formId = $this->getId();
+    	if (0 < strlen($formId)) {
+    		$this->setAttrib('id', $formId . '_' . $suffix);
+    	}
+    	
+    	// elements
+    	$elements = $this->getElements();
+    	foreach ($elements as $element) {
+    		$element->setAttrib('id', $element->getId() . '_' . $suffix);
+    	}
+    	
+    	return $this;
+    }
+
 }
 

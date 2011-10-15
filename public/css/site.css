@@ -321,6 +321,17 @@ p {
 
 	padding: 5px 0px 5px 0px;
 }
+
+#cancel {
+	
+	cursor: pointer;
+	display: inline;
+}
+
+#id_pnp-label, #post_id_pnp-label, #post_id_pnp-label {
+	visibility:hidden;
+}
+
 .pnp {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -389,15 +400,19 @@ form {
 	padding: 0px 10px 10px 10px;
 }
 
-#debate dt {
+#debate dt,#debate_pnp dt {
 	display: inline;
 	padding: 2px;
 
 }
 
-#debate dd {
+#debate dd, #debate_pnp dt {
 	padding: 2px;
 	display: inline;
+}
+
+dd#markdown_pnp-element{
+	display:inline;
 }
 
 .justify {
@@ -662,6 +677,6 @@ ul.errors li {
 	height: 10px;
 }
 
-#content-longr {
+#content-longr,#content-longr_pnp {
 	display: none;
 }

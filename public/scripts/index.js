@@ -1,5 +1,25 @@
 $(document).ready(function(){
-    var POLL_INTERVAL = 100;
+    
+	//Hide PNP form:
+	if($('.pnp_content').length > 0){
+		$('#pnp-form').hide();
+		$('#submit_pnp').parent().append('<div id="cancel">Prekliči</div>');
+		$('#cancel').click(function(){
+			$('#pnp-form').slideUp('medium', function(){
+				$('#add-pnp').show();
+				
+			});
+		});
+		$('#add-pnp').click(function(event){
+			event.preventDefault();
+			$('#add-pnp').hide();
+			$('#pnp-form').slideDown();
+		});
+	}
+	else{
+		$('#add-pnp').hide();
+	}
+	var POLL_INTERVAL = 100;
     var UPDATE_CHAT_INTERVAL = 60000;
     
     //Ajaxy debate paging:
