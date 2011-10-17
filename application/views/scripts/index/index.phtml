@@ -33,7 +33,9 @@ echo $this->paginationControl($this->debate, 'Sliding', 'pagination.phtml');
 
     </div>
 
-    <?php endif; ?>
+    <?php else: ?>
+    <div class="pnp_empty">Imaš priložnost, da dodaš današnji PNP:</div>
+    <?php endif;?>
     <p><a href="/pnp" id="add-pnp">Dodaj PNP</a></p>
     <div id="pnp-form"><?php echo $this->pnp_form?></div>
     </div>

@@ -41,7 +41,7 @@ class PnpController extends Zend_Controller_Action
                 }
                 $pnp->User = Model_User::setUser($form->getValues());
                 $pnp->save();
-                $this->_redirect('/pnp/');
+                $this->_redirect('/');
             }
             else
             {

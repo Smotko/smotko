@@ -342,6 +342,10 @@ p {
 	margin-bottom: 10px;
 }
 
+.pnp_empty{
+	padding:15px 0px 0px 10px;
+	line-height: 20px;
+}
 
 .pnp_content {
 	text-align: center;
