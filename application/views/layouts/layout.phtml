@@ -42,6 +42,7 @@
   <div class="wrapper">
   <div class="header_bg">
 <div class="container_12" id="header">
+<div title="Vesele praznike" style="z-index:666;position:absolute;top: 0px;  left: 351px;background-image:url(/images/santa.gif);width:87px;height:87px;margin-left: 220px;"></div>
     <div class="grid_4">
         <h1 class="site_title"><a href="/"><?php echo $this->escape(Model_Settings::findActiveParam('site_title'));?></a></h1>
         <p class="site_description"><?php echo $this->escape(Model_Settings::findActiveParam('site_description'));?></p>
@@ -53,9 +54,7 @@
 
           <?php echo $this->navigation()->menu()->renderMenu(null, array('maxDepth' => 0)); ?>
 
-<div title="Vesele praznike" style="z-index:666;position:absolute;top:10px; right:20px;background-im    age:url(/images/santa.gif);width:87px;height:87px;"></div>
-
-        
+       
 
         
     </div>
